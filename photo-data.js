@@ -163,7 +163,7 @@ window.PHOTO_DATA = {
         {
             "id": "headerjump",
             "src": "images/photography/headerjump.JPG",
-            "alt": "Photography by Dominik Hüppin",
+            "alt": "Header",
             "location": "biarritz"
         },
         {
@@ -187,13 +187,13 @@ window.PHOTO_DATA = {
         {
             "id": "lichterderstadt",
             "src": "images/photography/LichterDerStadt.JPG",
-            "alt": "City lights",
+            "alt": "City Lights",
             "location": "tokyo"
         },
         {
             "id": "foxy",
             "src": "images/photography/Foxy.JPG",
-            "alt": "Fox",
+            "alt": "Stone Fox",
             "location": "kyoto"
         },
         {
@@ -205,13 +205,13 @@ window.PHOTO_DATA = {
         {
             "id": "rainbowrhinos",
             "src": "images/photography/rainbowrhinos.JPG",
-            "alt": "Rhinos with rainbow",
+            "alt": "Rhinos with Rainbow",
             "location": "south-africa"
         },
         {
             "id": "rhino",
             "src": "images/photography/rhino.JPG",
-            "alt": "Rhino",
+            "alt": "Rhino Silhouette",
             "location": "south-africa"
         },
         {
@@ -223,31 +223,31 @@ window.PHOTO_DATA = {
         {
             "id": "anchorpoint",
             "src": "images/photography/anchorpoint.JPG",
-            "alt": "Anchor point",
+            "alt": "Anchor Point",
             "location": "anchor-point"
         },
         {
             "id": "bamboooverroof",
             "src": "images/photography/BambooOverRoof.png",
-            "alt": "Bamboo over roof",
+            "alt": "Bamboo over Roof",
             "location": "kyoto"
         },
         {
             "id": "bluewater",
             "src": "images/photography/bluewater.JPG",
-            "alt": "Blue water",
+            "alt": "Blue Water",
             "location": "bali"
         },
         {
             "id": "coffee-biarritz",
             "src": "images/photography/coffee_biarritz.JPG",
-            "alt": "Coffee in Biarritz",
+            "alt": "Coffee Shop in Biarritz",
             "location": "biarritz"
         },
         {
             "id": "cottoncandysky",
             "src": "images/photography/cottoncandysky.JPG",
-            "alt": "Cotton candy sky",
+            "alt": "Cotton Candy Sky",
             "location": "kagoshima"
         },
         {
@@ -277,7 +277,7 @@ window.PHOTO_DATA = {
         {
             "id": "gl-ckimwasser",
             "src": "images/photography/GlückImWasser.JPG",
-            "alt": "In the water",
+            "alt": "Fate",
             "location": "kyoto"
         },
         {
@@ -289,20 +289,20 @@ window.PHOTO_DATA = {
         {
             "id": "massiv",
             "src": "images/photography/massiv.JPG",
-            "alt": "Mountain massif",
+            "alt": "Massive",
             "location": "switzerland"
         },
         {
             "id": "mossyhead",
             "src": "images/photography/MossyHead.JPG",
-            "alt": "Mossy head",
+            "alt": "Mossy Heads",
             "location": "kyoto",
             "locationNote": "Kyoto (inferred from the supplied photo order)"
         },
         {
             "id": "mountsunrise",
             "src": "images/photography/mountsunrise.JPG",
-            "alt": "Mountain sunrise",
+            "alt": "Mountain Sunrise",
             "location": "switzerland"
         },
         {
@@ -314,38 +314,38 @@ window.PHOTO_DATA = {
         {
             "id": "pensador",
             "src": "images/photography/pensador.JPG",
-            "alt": "Pensador",
+            "alt": "In its Thoughts",
             "location": "kyoto"
         },
         {
             "id": "protectingarms",
             "src": "images/photography/protectingarms.JPG",
-            "alt": "Rams",
+            "alt": "Protecting Arms",
             "location": "kyoto",
             "locationNote": "Kyoto (location to confirm)"
         },
         {
             "id": "solosurfer",
             "src": "images/photography/solosurfer.JPG",
-            "alt": "Solo surfer",
+            "alt": "Solo Surfer",
             "location": "biarritz"
         },
         {
             "id": "sunnebluemefigure",
             "src": "images/photography/SunnebluemeFigure.JPG",
-            "alt": "Sunflower",
+            "alt": "Sunflower Statues",
             "location": "kyoto"
         },
         {
             "id": "sunsetbuddha",
             "src": "images/photography/SunsetBuddha.JPG",
-            "alt": "Buddha at sunset",
+            "alt": "Buddha at Sunset",
             "location": "kyoto"
         },
         {
             "id": "sunsetsurf",
             "src": "images/photography/SunSetSurf.JPG",
-            "alt": "Surfing at sunset",
+            "alt": "Sunset Surf",
             "location": "tokyo"
         },
         {
@@ -357,13 +357,13 @@ window.PHOTO_DATA = {
         {
             "id": "surfvehicle",
             "src": "images/photography/surfvehicle.JPG",
-            "alt": "Surf vehicle",
+            "alt": "Surf Vehicle",
             "location": "tanegashima"
         },
         {
             "id": "tanegashimatreetop",
             "src": "images/photography/tanegashimatreetop.JPG",
-            "alt": "Tanegashima treetop",
+            "alt": "Tanegashima Treetop",
             "location": "tanegashima"
         },
         {
@@ -375,7 +375,7 @@ window.PHOTO_DATA = {
         {
             "id": "turmbearbeitethochformat",
             "src": "images/photography/TurmBearbeitetHochformat.JPG",
-            "alt": "Tower",
+            "alt": "Hokan-ji",
             "location": "kyoto"
         }
     ]
