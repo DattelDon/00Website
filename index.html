@@ -14,6 +14,12 @@
 
     <!-- Link to your CSS file -->
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="travels.css">
+    <script src="navigation.js" defer></script>
+    <script src="photo-data.js" defer></script>
+    <script src="data/globe-geography.js" defer></script>
+    <script src="globe.js" defer></script>
+    <script src="travels.js" defer></script>
     <link rel="icon" type="image/png" href="images/favicon.png">
 </head>
 
@@ -36,6 +42,7 @@
                 <a href="#work">Work</a>
                 <a href="#photography">Photography</a>
                 <a href="#education">Education</a>
+                <a href="#travels">Travels</a>
                 <a href="#contact">Contact</a>
 
                 <!-- Replace path once your CV is in the folder -->
@@ -341,8 +348,89 @@
 
 
         <!-- =====================================================
-             CONTACT
+             TRAVELS
         ====================================================== -->
+        <div class="travel-transition" aria-hidden="true">
+            <svg class="travel-transition-hexagons" xmlns="http://www.w3.org/2000/svg" focusable="false"></svg>
+        </div>
+        <section id="travels" class="travels" aria-labelledby="travels-title">
+            <div class="travels-heading">
+                <div>
+                    <p class="atlas-eyebrow">A world of perspectives</p>
+                    <h2 id="travels-title">Travels</h2>
+                    <p class="travels-intro">Places I've been. Moments I've kept.</p>
+                </div>
+                <p class="atlas-counter" id="travel-counter"></p>
+            </div>
+
+            <div class="travel-explorer">
+                <div class="globe-stage">
+                    <canvas id="travel-globe" class="globe-canvas" tabindex="0"
+                            aria-label="Interactive world globe. Use arrow keys to rotate, plus and minus to zoom."
+                            aria-describedby="globe-instructions">
+                        Choose a destination from the list to explore its photographs.
+                    </canvas>
+                    <div class="globe-readout" aria-hidden="true"><span id="globe-view-label">Earth / Countries</span><span>Personal photographic journal</span></div>
+                    <div class="globe-pins" id="globe-pins"></div>
+                    <div class="globe-toolbar" role="group" aria-label="Globe controls">
+                        <button type="button" id="globe-rotation" class="globe-rotation" aria-pressed="true">Pause spin</button>
+                        <button type="button" id="globe-zoom-out" aria-label="Zoom out">−</button>
+                        <button type="button" id="globe-zoom-in" aria-label="Zoom in">+</button>
+                        <button type="button" id="globe-reset" aria-label="Reset globe view">Reset</button>
+                    </div>
+                </div>
+
+                <aside class="travel-sidebar" aria-label="Travel destinations and photographs">
+                    <div class="travel-breadcrumb" id="travel-breadcrumb" hidden>
+                        <button type="button" id="travel-world">← Back to world</button>
+                        <span id="travel-country-name"></span>
+                    </div>
+                    <p class="atlas-caption" id="travel-level-label">Explore by country</p>
+                    <div class="travel-destinations" id="travel-destinations" role="group" aria-label="Choose a country"></div>
+                    <div class="travel-empty" id="travel-empty">
+                        <span class="travel-empty-mark" aria-hidden="true">⌖</span>
+                        <h3 id="travel-empty-title">Every country has a story.</h3>
+                        <p id="travel-empty-description">Select a country to zoom in and discover the places and photographs within it.</p>
+                    </div>
+                    <div class="travel-selection" id="travel-selection" hidden>
+                        <h3 id="travel-location-title"></h3>
+                        <p class="travel-coordinates" id="travel-location-detail"></p>
+                        <button type="button" class="travel-photo-open" id="travel-photo-open" aria-label="Enlarge selected photograph">
+                            <img id="travel-photo" alt="" decoding="async">
+                            <span class="travel-photo-expand" aria-hidden="true">↗ Enlarge</span>
+                        </button>
+                        <div class="travel-photo-caption">
+                            <span id="travel-photo-title"></span>
+                            <div class="travel-photo-navigation" id="travel-photo-navigation" role="group" aria-label="Browse destination photographs">
+                                <button type="button" id="travel-photo-previous" aria-label="Previous photograph">←</button>
+                                <span id="travel-photo-count"></span>
+                                <button type="button" id="travel-photo-next" aria-label="Next photograph">→</button>
+                            </div>
+                        </div>
+                        <a class="travel-gallery-link" id="travel-gallery-link" href="photography.html">View in photography →</a>
+                        <button type="button" class="travel-back-globe" id="travel-back-globe">Back to globe ↑</button>
+                    </div>
+                    <p class="atlas-caption" id="travel-announcement" role="status" aria-live="polite"></p>
+                </aside>
+            </div>
+
+            <div class="travels-footer">
+                <p id="globe-instructions">Drag to explore · Select a pin to discover</p>
+                <p class="atlas-status" id="globe-status">Globe ready</p>
+            </div>
+            <noscript><p>Enable JavaScript to explore the globe, or <a href="photography.html">visit Photography</a>.</p></noscript>
+        </section>
+
+        <dialog class="travel-lightbox" id="travel-lightbox" aria-label="Travel photograph">
+            <button type="button" class="travel-lightbox-close" id="travel-lightbox-close">Close ×</button>
+            <img id="travel-lightbox-image" alt="">
+            <p id="travel-lightbox-caption"></p>
+        </dialog>
+
+        <!-- CONTACT -->
+        <div class="travel-transition travel-transition--out" aria-hidden="true">
+            <svg class="travel-transition-hexagons" xmlns="http://www.w3.org/2000/svg" focusable="false"></svg>
+        </div>
         <section id="contact" class="section contact">
 
             <h2>Contact</h2>
