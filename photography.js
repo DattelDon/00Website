@@ -4,6 +4,11 @@
 
     // The catalogue is the single source for images and their location tags.
     const catalogue = window.PHOTO_DATA;
+    const photosById = new Map((catalogue?.photos || []).map((photo) => [photo.id, photo]));
+    const previewOptions = {
+        sizes: '(max-width: 650px) calc(100vw - 40px), (max-width: 1000px) calc((100vw - 78px) / 2), (max-width: 1400px) calc((100vw - 96px) / 3), 435px',
+        preserveRatio: true,
+    };
     if (catalogue) {
         catalogue.photos.forEach((photo) => {
             const item = document.createElement('figure');
@@ -11,10 +16,11 @@
             item.id = photo.id;
             if (photo.location) item.dataset.location = photo.location;
             const image = document.createElement('img');
-            image.src = photo.src;
             image.alt = photo.alt;
             image.loading = 'lazy';
             image.decoding = 'async';
+            if (window.PHOTO_IMAGES) window.PHOTO_IMAGES.preview(image, photo, previewOptions);
+            else image.src = photo.src;
             item.append(image);
             gallery.append(item);
         });
@@ -33,6 +39,8 @@
         item.querySelector('button').setAttribute('aria-pressed', 'false');
         timers.set(item, setTimeout(() => {
             item.classList.remove('is-returning');
+            const photo = photosById.get(item.id);
+            if (photo) window.PHOTO_IMAGES?.preview(item.querySelector('img'), photo, previewOptions);
             timers.delete(item);
         }, 500));
     }
@@ -76,6 +84,8 @@
         item.classList.add('is-selected');
         button.setAttribute('aria-pressed', 'true');
         item.style.transform = `translate(${targetX - centerX}px, ${targetY - centerY}px) scale(${scale})`;
+        const photo = photosById.get(item.id);
+        if (photo) window.PHOTO_IMAGES?.large(item.querySelector('img'), photo);
     }
 
     gallery.querySelectorAll('.gallery-item').forEach((item) => {

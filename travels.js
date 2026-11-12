@@ -192,7 +192,10 @@
     function showPhoto() {
         const photo = photos[photoIndex];
         if (!photo) return;
-        byId('travel-photo').src = photo.src;
+        if (window.PHOTO_IMAGES) window.PHOTO_IMAGES.preview(byId('travel-photo'), photo, {
+            sizes: '(max-width: 650px) calc(100vw - 40px), (max-width: 900px) 40vw, (max-width: 1600px) 34vw, 520px',
+        });
+        else byId('travel-photo').src = photo.src;
         byId('travel-photo').alt = photo.alt;
         byId('travel-photo-title').textContent = photo.alt;
         byId('travel-location-detail').textContent = [currentLocation.precision, photo.locationNote].filter(Boolean).join(' · ');
@@ -267,7 +270,8 @@
     byId('travel-photo-open').addEventListener('click', () => {
         const photo = photos[photoIndex];
         if (!photo) return;
-        byId('travel-lightbox-image').src = photo.src;
+        if (window.PHOTO_IMAGES) window.PHOTO_IMAGES.large(byId('travel-lightbox-image'), photo);
+        else byId('travel-lightbox-image').src = photo.src;
         byId('travel-lightbox-image').alt = photo.alt;
         byId('travel-lightbox-caption').textContent = `${photo.alt} · ${currentLocation.label}`;
         dialog.showModal();
